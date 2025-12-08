@@ -80,7 +80,7 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="mt-20 animate-bounce">
+        <div className="mt-15 animate-bounce">
           <svg
             className="w-8 h-8 mx-auto text-gray-500"
             fill="none"
