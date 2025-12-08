@@ -22,7 +22,7 @@ export default function Hero() {
   };
 
   const resumeUrl =
-    "https://docs.google.com/document/d/1VkMD843CZoMXrfUp_91rDGnxMj0QhihoqN51KQnzLi4/export?format=pdf";
+    "https://drive.google.com/file/d/1Sf3yTgfNRG5Qarsq1H2NlFge5eHr7r9x/view?usp=sharing";
 
   return (
     <section
@@ -43,7 +43,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
-        <p className="text-lg sm:text-xl text-purple-400 font-medium mb-4">
+        <p className="text-lg sm:text-xl mt-22 text-purple-400 font-medium mb-4">
           Hi there, my name is
         </p>
 
