@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import logo from "../assets/Compact-logo-designs.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +36,13 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="px-6 py-4">
+      <motion.div
+        initial={{ opacity: 0, y: -40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="px-6 py-4"
+      >
         <div className="flex justify-between items-center">
           {/* Logo */}
           <a
@@ -47,7 +55,7 @@ export default function Navbar() {
                 scrolled ? "text-purple-400" : "text-purple-300"
               }`}
             >
-              RAKIB SARKER
+              <img className="w-30 h-12" src={logo} alt="" />
             </span>
           </a>
 
@@ -109,7 +117,7 @@ export default function Navbar() {
             )}
           </button>
         </div>
-      </div>
+      </motion.div>
 
       {/* Mobile Menu */}
       <div

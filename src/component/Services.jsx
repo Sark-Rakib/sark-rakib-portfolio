@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Services() {
   const services = [
@@ -132,8 +133,15 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl sm:text-4xl font-bold text-white mb-6 tracking-tight">
-            What I Do
+          <h2 className="text-4xl sm:text-4xl lg:text-4xl font-bold text-white mb-6 tracking-tight relative inline-block">
+            What <span className="text-purple-400">I Do</span>
+            <motion.span
+              initial={{ width: 0 }}
+              whileInView={{ width: "92%" }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+            />
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             I help businesses and individuals bring their ideas to life with
@@ -142,7 +150,13 @@ export default function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: -90, y: 20 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: false }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {services.map((service, index) => (
             <div
               key={index}
@@ -163,7 +177,7 @@ export default function Services() {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

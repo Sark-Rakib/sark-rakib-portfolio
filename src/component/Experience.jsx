@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Experience() {
   const experiences = [
@@ -34,17 +35,24 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-20 bg-gradient-to-b from-[#0a0a1a] via-[#0c0c1e] to-[#0f0f2f]"
+      className="py-10 bg-gradient-to-b from-[#0a0a1a] via-[#0c0c1e] to-[#0f0f2f]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl sm:text-4xl font-bold text-white mb-6 tracking-tight">
-            My Journey
+          <h2 className="text-4xl sm:text-4xl lg:text-4xl font-bold text-white mb-6 tracking-tight relative inline-block">
+            My <span className="text-purple-400">Journey</span>
+            <motion.span
+              initial={{ width: 0 }}
+              whileInView={{ width: "98%" }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+            />
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             From learning the basics to building full-stack applications —
-            here’s how I grew
+            here's how I grew
           </p>
         </div>
 
@@ -76,7 +84,11 @@ export default function Experience() {
               </div>
 
               {/* Card */}
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                viewport={{ once: false }}
                 className="ml-8 md:ml-12 flex-1 bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 
                 hover:bg-white/10 hover:border-purple-500/40 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2"
               >
@@ -95,10 +107,10 @@ export default function Experience() {
                   </span>
                 </div>
 
-                <p className="text-gray-300 leading-relaxed text-lg">
+                <p className="text-gray-300 leading-relaxed">
                   {exp.description}
                 </p>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>

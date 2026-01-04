@@ -1,4 +1,6 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   const projects = [
@@ -63,8 +65,15 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl sm:text-4xl font-bold text-white mb-6 tracking-tight">
-            Featured Projects
+          <h2 className="text-4xl sm:text-4xl lg:text-4xl font-bold text-white mb-6 tracking-tight relative inline-block">
+            Featured <span className="text-purple-400">Projects</span>
+            <motion.span
+              initial={{ width: 0 }}
+              whileInView={{ width: "99%" }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="absolute top-10 left-1/2 -translate-x-1/2 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+            />
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Here are some of my recent works that I'm really proud of.
@@ -72,7 +81,13 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          initial={{ opacity: 0, x: 24 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           {projects.map((project, index) => (
             <div
               key={index}
@@ -141,22 +156,35 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* CTA */}
-        <div className="text-center mt-20">
-          <p className="text-lg text-gray-400">
+        <motion.div
+          initial={{ opacity: 0, x: -75 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false }}
+          className="text-center mt-15"
+        >
+          <p className="text-lg text-purple-400 flex items-center justify-center gap-2">
             Want to see more? Check out my{" "}
+            <motion.span
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              viewport={{ once: false }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+              className="absolute top-7 left-1/2 -translate-x-1/2  h-1 bg-gradient-to-r from-purple-500 rounded-full"
+            />
             <a
               href="https://github.com/Sark-Rakib"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-400 font-bold hover:underline"
+              className="text-purple-400 flex items-center gap-1 text-2xl"
             >
-              GitHub
+              <FaGithub />
             </a>
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
