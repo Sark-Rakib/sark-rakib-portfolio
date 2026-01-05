@@ -28,7 +28,14 @@ export default function Hero() {
   const resumeUrl =
     "https://drive.google.com/file/d/1foNlNUNZuBVljpo1_rXrkYnUYJDakYiG/view";
 
-  // Stagger container for children
+  // Social links - replace with your actual profiles
+  const socialLinks = {
+    facebook: "https://www.facebook.com/sarkrakib/",
+    github: "https://github.com/Sark-Rakib",
+    linkedin: "https://www.linkedin.com/in/rakib-sarker-",
+  };
+
+  // Stagger container
   const container = {
     hidden: { opacity: 0 },
     visible: {
@@ -40,7 +47,6 @@ export default function Hero() {
     },
   };
 
-  // Individual child animation
   const item = {
     hidden: { y: 30, opacity: 0 },
     visible: {
@@ -55,7 +61,7 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Beautiful SVG Wave Background */}
+      {/* SVG Wave Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-[#0c0c1e]" />
         <svg
@@ -98,6 +104,75 @@ export default function Hero() {
         </svg>
       </div>
 
+      {/* Social Icons - Fixed Left Side (Vertical) */}
+      <div className="fixed left-6 top-1/2 -translate-y-1/2 z-20 hidden md:flex flex-col gap-6">
+        <motion.a
+          href={socialLinks.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1 }}
+          whileHover={{ scale: 1.2, x: 10 }}
+          className="text-purple-400 hover:text-white transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+          </svg>
+        </motion.a>
+
+        <motion.a
+          href={socialLinks.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.1 }}
+          whileHover={{ scale: 1.2, x: 10 }}
+          className="text-purple-400 hover:text-white transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </motion.a>
+
+        <motion.a
+          href={socialLinks.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.2 }}
+          whileHover={{ scale: 1.2, x: 10 }}
+          className="text-purple-400 hover:text-white transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="28"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
+            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+          </svg>
+        </motion.a>
+
+        {/* Vertical line */}
+        <div className="w-px h-32 bg-purple-400 mx-auto opacity-50" />
+      </div>
+
       <motion.div
         className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center"
         variants={container}
@@ -106,7 +181,7 @@ export default function Hero() {
       >
         <motion.p
           variants={item}
-          className="text-lg sm:text-xl mt-25 sm:mt-10 md:mt-10 text-purple-400 font-medium mb-4"
+          className="text-lg sm:text-xl mt-23 sm:mt-10 md:mt-10 text-purple-400 font-medium mb-4"
         >
           Hi there, my name is
         </motion.p>
@@ -146,9 +221,10 @@ export default function Hero() {
           modern technologies like React and Tailwind CSS.
         </motion.p>
 
+        {/* Buttons - Find Me button removed */}
         <motion.div
           variants={item}
-          className="mt-5 flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="mt-5 flex flex-col sm:flex-row gap-6 justify-center items-center"
         >
           <motion.button
             onClick={() => handleScroll("#projects")}
@@ -161,7 +237,8 @@ export default function Hero() {
 
           <motion.a
             href={resumeUrl}
-            download="Rakib-Sarker-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 border-2 border-purple-500 text-purple-400 font-bold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-xl"
@@ -179,7 +256,7 @@ export default function Hero() {
             repeatType: "reverse",
             duration: 1.5,
           }}
-          className="mt-5 sm:mt-15 md:mt-17"
+          className="mt-2 sm:mt-20 md:mt-22"
         >
           <svg
             className="w-8 h-8 mx-auto text-gray-500"

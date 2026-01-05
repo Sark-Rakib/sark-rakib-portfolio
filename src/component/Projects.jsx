@@ -19,8 +19,8 @@ export default function Projects() {
       description:
         "Advanced machine intelligence that delivers accurate and reliable predictions.",
       tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB"],
-      liveUrl: "https://ai-models-dev.netlify.app/",
-      githubUrl: "https://github.com/Sark-Rakib/Al-Model-Client",
+      liveUrl: "https://ai-model-dev.netlify.app/",
+      githubUrl: "https://github.com/Sark-Rakib/ai-model-client",
       image: "https://i.ibb.co.com/qFPVMJfv/Screenshot-2025-12-08-015911.png",
     },
     {
