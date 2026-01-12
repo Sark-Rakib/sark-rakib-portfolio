@@ -128,7 +128,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-b from-[#0f0f2f] via-[#0c0c1e] to-[#0a0a1a]"
+      className=" py-20 bg-gradient-to-b from-[#0f0f2f] via-[#0c0c1e] to-[#0a0a1a]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
@@ -137,7 +137,7 @@ export default function Services() {
             What <span className="text-purple-400">I Do</span>
             <motion.span
               initial={{ width: 0 }}
-              whileInView={{ width: "92%" }}
+              whileInView={{ width: "95%" }}
               viewport={{ once: false }}
               transition={{ duration: 1.2, delay: 0.5 }}
               className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"

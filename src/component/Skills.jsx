@@ -88,7 +88,7 @@ export default function Skills() {
             Tech <span className="text-purple-400">Stack</span>
             <motion.span
               initial={{ width: 0 }}
-              whileInView={{ width: "130px" }}
+              whileInView={{ width: "142px" }}
               viewport={{ once: false }}
               transition={{ duration: 1.2, delay: 0.5 }}
               className="absolute top-9 left-1/2 -translate-x-1/2  h-1 bg-gradient-to-r from-purple-500 rounded-full"

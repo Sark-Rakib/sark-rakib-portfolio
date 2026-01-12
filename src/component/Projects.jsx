@@ -166,7 +166,7 @@ export default function Projects() {
           viewport={{ once: false }}
           className="text-center mt-15"
         >
-          <p className="text-lg text-purple-400 flex items-center justify-center gap-2">
+          <p className="text-lg text-purple-400 flex items-center justify-center gap-2 ">
             Want to see more? Check out my{" "}
             <motion.span
               initial={{ width: 0 }}
@@ -181,7 +181,7 @@ export default function Projects() {
               rel="noopener noreferrer"
               className="text-purple-400 flex items-center gap-1 text-2xl"
             >
-              <FaGithub />
+              <FaGithub className="bg-purple-500 text-black rounded-full p-1 hover:text-white" />
             </a>
           </p>
         </motion.div>

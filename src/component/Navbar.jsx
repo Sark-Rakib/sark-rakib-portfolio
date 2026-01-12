@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "../assets/Compact-logo-designs.png";
+import { CiHome } from "react-icons/ci";
+
+import {
+  AiOutlineUser,
+  AiOutlineProject,
+  AiOutlineFundProjectionScreen,
+  AiOutlineMail,
+} from "react-icons/ai";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +23,15 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Experience", href: "#experience" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "#home", icon: <CiHome /> },
+    { name: "About", href: "#about", icon: <AiOutlineUser /> },
+    { name: "Projects", href: "#projects", icon: <AiOutlineProject /> },
+    {
+      name: "Experience",
+      href: "#experience",
+      icon: <AiOutlineFundProjectionScreen />,
+    },
+    { name: "Contact", href: "#contact", icon: <AiOutlineMail /> },
   ];
 
   const handleSmoothScroll = (e, href) => {
@@ -66,13 +78,14 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleSmoothScroll(e, link.href)}
-                className={`relative text-sm font-medium transition-all duration-300 ${
+                className={`flex items-center space-x-2 relative text-sm font-medium transition-all duration-300 ${
                   scrolled
                     ? "text-gray-200 hover:text-white"
                     : "text-gray-300 hover:text-white"
                 } after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-400 after:transition-all after:duration-300 hover:after:w-full`}
               >
-                {link.name}
+                {link.icon && <span className="text-lg">{link.icon}</span>}
+                <span>{link.name}</span>
               </a>
             ))}
           </div>
@@ -131,9 +144,10 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={(e) => handleSmoothScroll(e, link.href)}
-              className="block py-3 text-gray-200 hover:text-purple-400 font-medium transition"
+              className="flex items-center space-x-2 py-3 text-gray-200 hover:text-purple-400 font-medium transition"
             >
-              {link.name}
+              {link.icon && <span className="text-lg">{link.icon}</span>}
+              <span>{link.name}</span>
             </a>
           ))}
         </div>
