@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
   const [text, setText] = useState("");
-  const [showCursor, setShowCursor] = useState(true);
+  // const [showCursor, setShowCursor] = useState(true);
   const fullText = "I'm a Passionate Web Developer";
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function Hero() {
         index++;
       } else {
         clearInterval(timer);
-        setShowCursor(false);
+        // setShowCursor(false);
       }
     }, 80);
 
@@ -105,12 +105,12 @@ export default function Hero() {
       </div>
 
       {/* Social Icons - Fixed Left Side (Vertical) */}
-      <div className="fixed left-6 top-1/2 -translate-y-1/2 z-20 hidden md:flex flex-col gap-6">
+      <div className="fixed flex flex-col gap-6 right-6 top-1/2 -translate-y-1/2 z-20 md:flex md:flex-col md:gap-6">
         <motion.a
           href={socialLinks.facebook}
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 1 }}
           whileHover={{ scale: 1.2, x: 10 }}
@@ -174,57 +174,53 @@ export default function Hero() {
       </div>
 
       <motion.div
-        className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center"
+        className="relative z-10 w-11/12 px-2 sm:px-8 lg:px-30 text-start"
         variants={container}
         initial="hidden"
         animate="visible"
       >
         <motion.p
           variants={item}
-          className="text-lg sm:text-xl mt-23 sm:mt-10 md:mt-10 text-purple-400 font-medium mb-4"
+          className="text-lg sm:text-xl mt-23 sm:mt-10 md:mt-20 text-purple-400 font-medium mb-4"
         >
           Hi there, my name is
         </motion.p>
 
         <motion.h1
           variants={item}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2"
         >
           RAKIB SARK<span className="text-purple-400">E</span>R
         </motion.h1>
 
         <motion.div
           variants={item}
-          className="h-20 flex items-center justify-center mb-8"
+          className="h-20 flex items-center justify-start mb-4"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-purple-300">
+          <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-purple-300">
             {text}
             <AnimatePresence>
-              {showCursor && (
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="inline-block w-1 h-10 bg-purple-400 ml-1"
-                  transition={{ repeat: Infinity, duration: 0.8 }}
-                />
-              )}
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              />
             </AnimatePresence>
           </h2>
         </motion.div>
 
         <motion.p
           variants={item}
-          className="mt-5 max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 leading-relaxed"
+          className="text-lg sm:text-xl text-gray-300 leading-relaxed"
         >
-          I craft beautiful, fast, and user-friendly web experiences using
-          modern technologies like React and Tailwind CSS.
+          I craft beautiful, fast, and user-friendly web experiences <br />
+          using modern technologies like React andTailwind CSS.
         </motion.p>
 
         {/* Buttons - Find Me button removed */}
         <motion.div
           variants={item}
-          className="mt-5 flex flex-col sm:flex-row gap-6 justify-center items-center"
+          className="mt-5 flex flex-col justify-start items-start sm:flex-row gap-6 md:justify-start md:items-center"
         >
           <motion.button
             onClick={() => handleScroll("#projects")}

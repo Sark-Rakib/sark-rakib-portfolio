@@ -55,7 +55,7 @@ export default function Navbar() {
         viewport={{ once: true }}
         className="px-6 py-4"
       >
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center h-6">
           {/* Logo */}
           <a
             href="#home"
