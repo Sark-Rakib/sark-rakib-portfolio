@@ -214,7 +214,7 @@ export default function Hero() {
           className="text-lg sm:text-xl text-gray-300 leading-relaxed"
         >
           I craft beautiful, fast, and user-friendly web experiences <br />
-          using modern technologies like React andTailwind CSS.
+          using modern technologies like React and Tailwind CSS.
         </motion.p>
 
         {/* Buttons - Find Me button removed */}
