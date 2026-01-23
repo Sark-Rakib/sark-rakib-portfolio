@@ -5,14 +5,23 @@ import { FaGithub } from "react-icons/fa";
 export default function Projects() {
   const projects = [
     {
-      title: "ZapShift E-Commerce",
+      title: "E-TuitionBD",
       description:
-        "Full-stack online store with cart, Stripe payments, and admin dashboard.",
+        "MERN-stack online tuition platfrom, Stripe payments, and admin dashboard.",
       tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
-      image: "https://i.ibb.co.com/zWTpQGh3/Screenshot-2025-12-08-024406.png",
+      liveUrl: "https://e-tuition-bd.netlify.app",
+      githubUrl: "https://github.com/Sark-Rakib/e-tuition-bd",
+      image: "https://i.ibb.co.com/sp865H4P/2026-01-13.png",
       featured: true,
+    },
+    {
+      title: "E-PRoducts",
+      description:
+        "Advanced machine intelligence that delivers accurate and reliable predictions.",
+      tech: ["Next.js", "Tailwind", "Node.js", "Express", "MongoDB"],
+      liveUrl: "https://e-productsapp.vercel.app/",
+      githubUrl: "https://github.com/Sark-Rakib/e-products",
+      image: "https://i.ibb.co.com/9mMrLbGJ/Screenshot-2026-01-22-233604.png",
     },
     {
       title: "AI - Model",
