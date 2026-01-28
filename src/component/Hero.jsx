@@ -181,7 +181,7 @@ export default function Hero() {
       >
         <motion.p
           variants={item}
-          className="text-lg sm:text-xl mt-23 sm:mt-10 md:mt-20 text-purple-400 font-medium mb-4"
+          className="text-lg sm:text-xl mt-20 sm:mt-10 md:mt-20 text-purple-400 font-medium mb-4"
         >
           Hi there, my name is
         </motion.p>
