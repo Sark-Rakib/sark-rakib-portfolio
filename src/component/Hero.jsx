@@ -188,9 +188,9 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-white to-purple-700 bg-clip-text text-transparent"
         >
-          RAKIB SARK<span className="text-purple-400">E</span>R
+          RAKIB SARKER
         </motion.h1>
 
         <motion.div
