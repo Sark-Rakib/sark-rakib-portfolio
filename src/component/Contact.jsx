@@ -81,12 +81,8 @@ export default function Contact() {
             className="absolute top-9 left-1/2 -translate-x-1/2 w-32 sm:w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"
           />
         </h2>
-        {/* <p className="text-gray-400 mb-10 max-w-3xl mx-auto">
-          Feel free to reach out — I'm always open to discussing new projects,{" "}
-          <br />
-          ideas, or opportunities.
-        </p> */}
-        <div className="flex justify-between items-center">
+
+        <div className="flex flex-col-reverse justify-between items-center md:flex-row">
           {/* Social Icons */}
           <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
             {socials.map((social) => (
