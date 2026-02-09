@@ -37,7 +37,7 @@ const socials = [
   },
   {
     name: "WhatsApp",
-    url: "https://wa.me/01745762857",
+    url: "https://wa.me/+8801745762857",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
