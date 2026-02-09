@@ -13,12 +13,67 @@ import {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState("home");
+
+  // useEffect(() => {
+  //   const sections = ["home", "about", "projects", "experience", "contact"];
+
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 50);
+  //     const scrollPos = window.scrollY + 120;
+
+  //     // for (let sec of sections) {
+  //     //   const el = document.getElementById(sec);
+  //     //   if (
+  //     //     el &&
+  //     //     scrollPos >= el.offsetTop &&
+  //     //     scrollPos < el.offsetTop + el.offsetHeight
+  //     //   ) {
+  //     //     setActiveLink(sec);
+  //     //   }
+  //     // }
+  //     for (let i = 0; i < sections.length; i++) {
+  //       const sec = sections[i];
+  //       const el = document.getElementById(sec);
+  //       if (!el) continue;
+
+  //       const isLast = i === sections.length - 1;
+
+  //       if (
+  //         scrollPos >= el.offsetTop &&
+  //         (isLast || scrollPos < el.offsetTop + el.offsetHeight)
+  //       ) {
+  //         setActiveLink(sec);
+  //       }
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   useEffect(() => {
+    const sections = ["home", "about", "projects", "experience", "contact"];
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+      const scrollPos = window.scrollY + window.innerHeight / 2;
+
+      for (let sec of sections) {
+        const el = document.getElementById(sec);
+        if (!el) continue;
+
+        if (
+          scrollPos >= el.offsetTop &&
+          scrollPos < el.offsetTop + el.offsetHeight
+        ) {
+          setActiveLink(sec);
+        }
+      }
     };
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // page load e active detect korar jonno
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -42,7 +97,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-6xl z-50 transition-all duration-500 rounded-2xl ${
+      className={`fixed top-6 left-1/2 -translate-x-1/2 w-11/12 max-w-6xl z-50 transition-all duration-500 rounded-4xl ${
         scrolled
           ? "bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl"
           : "bg-transparent"
@@ -62,32 +117,38 @@ export default function Navbar() {
             onClick={(e) => handleSmoothScroll(e, "#home")}
             className="text-2xl font-bold tracking-tight"
           >
-            <span
-              className={`font-extrabold ${
-                scrolled ? "text-purple-400" : "text-purple-300"
-              }`}
-            >
-              <img className="w-30 h-12" src={logo} alt="" />
-            </span>
+            <img className="w-30 h-12" src={logo} alt="logo" />
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => handleSmoothScroll(e, link.href)}
-                className={`flex items-center space-x-2 relative text-sm font-medium transition-all duration-300 ${
-                  scrolled
-                    ? "text-gray-200 hover:text-white"
-                    : "text-gray-300 hover:text-white"
-                } after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-purple-400 after:transition-all after:duration-300 hover:after:w-full`}
-              >
-                {link.icon && <span className="text-lg">{link.icon}</span>}
-                <span>{link.name}</span>
-              </a>
-            ))}
+          <div className="hidden md:flex items-center space-x-3 relative">
+            {navLinks.map((link) => {
+              const isActive = activeLink === link.href.replace("#", "");
+
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  onClick={(e) => handleSmoothScroll(e, link.href)}
+                  className="relative px-4 py-2 flex items-center gap-2 text-sm font-medium text-gray-200"
+                >
+                  {isActive && (
+                    <motion.span
+                      layoutId="nav-pill"
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 30,
+                      }}
+                      className="absolute inset-0 rounded-4xl bg-purple-500/20 backdrop-blur-md"
+                    />
+                  )}
+
+                  <span className="relative z-10 text-lg">{link.icon}</span>
+                  <span className="relative z-10">{link.name}</span>
+                </a>
+              );
+            })}
           </div>
 
           {/* Mobile Toggle */}
@@ -144,9 +205,13 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={(e) => handleSmoothScroll(e, link.href)}
-              className="flex items-center space-x-2 py-3 text-gray-200 hover:text-purple-400 font-medium transition"
+              className={`flex items-center gap-2 py-3 px-4 rounded-4xl transition ${
+                activeLink === link.href.replace("#", "")
+                  ? "bg-purple-500/20 text-purple-400"
+                  : "text-gray-200"
+              }`}
             >
-              {link.icon && <span className="text-lg">{link.icon}</span>}
+              <span className="text-lg">{link.icon}</span>
               <span>{link.name}</span>
             </a>
           ))}

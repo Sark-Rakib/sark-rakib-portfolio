@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import ContactForm from "./ContactForm";
 
 // Social icons data
 const socials = [
@@ -38,12 +39,18 @@ const socials = [
     name: "WhatsApp",
     url: "https://wa.me/01745762857",
     icon: (
-      <svg className="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004c-2.319 0-4.602-.463-6.796-1.364l-.487-.28-4.782.496.506-4.734-.28-.487c-.945-2.194-1.444-4.576-1.444-7.061 0-7.293 5.932-13.227 13.228-13.227 3.527 0 6.847 1.376 9.342 3.871 2.495 2.495 3.871 5.815 3.871 9.342 0 7.293-5.932 13.227-13.228 13.227m7.64-19.955c-2.994-2.994-6.979-4.643-11.207-4.643-8.727 0-15.82 7.093-15.82 15.82 0 2.794.726 5.519 2.102 7.891l-2.244 8.35 8.564-2.225c2.323 1.265 4.92 1.935 7.598 1.935 8.728 0 15.82-7.093 15.82-15.82-.001-4.228-1.65-8.213-4.643-11.206" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+        className="w-7 h-7"
+        fill="currentColor"
+      >
+        <path d="M380.9 97.1C339-1.4 267.8-21.9 208.3 1.2c-59.4 23.1-102.1 79.6-102.8 142.5-.5 52.7 24.8 102 65.1 133.9L64 448l172.3-81.1c31.9 18.6 68.1 29.5 104.4 30.2 63.2.9 122.2-34.2 147.1-91.2 24.9-57 14-123.2-29.3-167.8zm-156.9 294.1c-55.5 0-100.5-45-100.5-100.5s45-100.5 100.5-100.5 100.5 45 100.5 100.5-45 100.5-100.5 100.5zm52.1-69.3l-27.7-12.6c-2.2-1-5.1-0.5-6.9 1.3l-12.3 12.3c-1.6 1.6-4.1 1.8-5.9.5l-18.3-13.7c-2.1-1.6-5-1.5-6.9.1l-14.8 13.7c-6.3 5.8-15.1 9-24 9.1-12.4 0-24.7-4.7-34.1-13.2-13.3-11.8-20.3-29.1-19.7-46.9.3-8.5 3-16.8 7.9-24.1l12.1-18.6c1.5-2.3 1-5.4-1.2-7.1l-22.6-17.5c-1.3-1-3-1.5-4.6-1.3-8.4.8-16.8 3.2-24.2 7.1-12.8 7.2-16 15.5-16.8 24-2 17.6 3.7 35.5 16.2 49.4 15.7 17.9 39.4 27.2 63.6 27.2 23.5 0 45.5-8.8 62.5-24.9l12.6-12.1c1.9-1.8 2.2-4.7.7-6.9z" />
       </svg>
     ),
     color: "bg-green-600/40 hover:bg-green-600/60",
   },
+
   {
     name: "Gmail",
     url: "mailto:mdrakibsarkar1@gmail.com",
@@ -60,7 +67,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-10 bg-gradient-to-b from-[#0a0a1a] via-[#0c0c1e] to-[#0f0f2f]"
+      className="py-5 bg-gradient-to-b from-[#0f0f25] via-[#0c0c1e] to-[#0f0f2f]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
         {/* Header */}
@@ -74,32 +81,38 @@ export default function Contact() {
             className="absolute top-9 left-1/2 -translate-x-1/2 w-32 sm:w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"
           />
         </h2>
-        <p className="text-gray-400 mb-10 max-w-3xl mx-auto">
+        {/* <p className="text-gray-400 mb-10 max-w-3xl mx-auto">
           Feel free to reach out — I'm always open to discussing new projects,{" "}
           <br />
           ideas, or opportunities.
-        </p>
-
-        {/* Social Icons */}
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
-          {socials.map((social) => (
-            <a
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full cursor-pointer transition-transform duration-500 transform hover:scale-110 hover:-rotate-6 ${social.color}`}
-              aria-label={social.name}
-            >
-              <div className="text-white">{social.icon}</div>
-              {/* Hover overlay for extra glow */}
-              <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
-            </a>
-          ))}
+        </p> */}
+        <div className="flex justify-between items-center">
+          {/* Social Icons */}
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
+            {socials.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`group relative flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full cursor-pointer transition-transform duration-500 transform hover:scale-110 hover:-rotate-6 ${social.color}`}
+                aria-label={social.name}
+              >
+                <div className="text-white">{social.icon}</div>
+                {/* Hover overlay for extra glow */}
+                <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
+              </a>
+            ))}
+            <p className="text-gray-400 mb-10 max-w-3xl mx-auto">
+              Feel free to reach out — I'm always open to discussing new
+              projects, <br />
+              ideas, or opportunities.
+            </p>
+          </div>
+          <ContactForm></ContactForm>
         </div>
-
-        <p className="mt-16 text-gray-500 text-base sm:text-lg">
-          © 2026 Rakib Sarker. All rights reserved.
+        <p className=" text-gray-500 text-base sm:text-lg">
+          <hr className="mb-2" />© 2026 Rakib Sarker. All rights reserved.
         </p>
       </div>
     </section>
