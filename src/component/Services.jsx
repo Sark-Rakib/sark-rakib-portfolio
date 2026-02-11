@@ -165,7 +165,7 @@ export default function Services() {
               {/* Gradient hover glow */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
 
-              <div className="mb-6 inline-flex p-4 bg-gradient-to-br from-purple-600/20 to-cyan-800 rounded-2xl text-white group-hover:scale-110 transition-transform duration-300">
+              <div className="mb-6 inline-flex p-4 bg-gradient-to-br from-purple-600/20 to-cyan-00 rounded-2xl text-white group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
 

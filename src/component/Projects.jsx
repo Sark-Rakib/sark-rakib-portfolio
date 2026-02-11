@@ -5,13 +5,14 @@ import { FaGithub } from "react-icons/fa";
 export default function Projects() {
   const projects = [
     {
-      title: "E-TuitionBD",
+      title: "Harir Shad",
       description:
-        "MERN-stack online tuition platfrom, Stripe payments, and admin dashboard.",
-      tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB"],
-      liveUrl: "https://e-tuition-bd.netlify.app",
-      githubUrl: "https://github.com/Sark-Rakib/e-tuition-bd",
-      image: "https://i.ibb.co.com/sp865H4P/2026-01-13.png",
+        "Production-ready full-stack web application built with React, Firebase Authentication, and MongoDB. Includes a responsive dashboard, product management system, and real-time data handling with a clean, modern UI.",
+      tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB", "Email.js"],
+      liveUrl: "https://harirshad.netlify.app",
+      githubUrl: "https://github.com/Sark-Rakib/dessert-shop-client",
+      image:
+        "https://i.ibb.co.com/rRqkWcD0/Screenshot-from-2026-02-12-02-27-30.png",
       featured: true,
     },
     {
@@ -23,6 +24,17 @@ export default function Projects() {
       githubUrl: "https://github.com/Sark-Rakib/e-products",
       image: "https://i.ibb.co.com/9mMrLbGJ/Screenshot-2026-01-22-233604.png",
     },
+    {
+      title: "E-TuitionBD",
+      description:
+        "MERN-stack online tuition platfrom, Stripe payments, and admin dashboard.",
+      tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB"],
+      liveUrl: "https://e-tuition-bd.netlify.app",
+      githubUrl: "https://github.com/Sark-Rakib/e-tuition-bd",
+      image: "https://i.ibb.co.com/sp865H4P/2026-01-13.png",
+      featured: true,
+    },
+
     {
       title: "AI - Model",
       description:
@@ -102,8 +114,8 @@ export default function Projects() {
               key={index}
               className={`group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 
                 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-6 hover:shadow-2xl
-                ${project.featured ? "lg:col-span-2 lg:row-span-2" : ""}`}
-              style={project.featured ? { height: "600px" } : {}}
+                ${project.featured ? "lg:col-span-2 " : ""}`}
+              style={project.featured ? { height: "auto" } : {}}
             >
               {/* Image */}
               <div className="relative overflow-hidden h-64 lg:h-80">
