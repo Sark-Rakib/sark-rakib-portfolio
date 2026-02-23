@@ -44,7 +44,7 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl sm:text-4xl lg:text-4xl font-bold text-white mb-6 tracking-tight relative inline-block">
+          <h2 className="text-4xl sm:text-4xl lg:text-4xl font-bold text-white mb-4 tracking-tight relative inline-block">
             My <span className="text-purple-400">Skills</span>
             <motion.span
               initial={{ width: 0 }}
