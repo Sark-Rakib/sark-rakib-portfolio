@@ -26,7 +26,7 @@ export default function Hero() {
   };
 
   const resumeUrl =
-    "https://drive.google.com/file/d/1czofr_DArYnpq8r_eqdqwmq-VJR3HyyX/view?usp=sharing";
+    "https://drive.google.com/file/d/1Pr0YJa1CvC9__t3XHdQ6v520JS0CRpkX/view?usp=sharing";
 
   // Social links - replace with your actual profiles
   const socialLinks = {
