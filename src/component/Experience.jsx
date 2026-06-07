@@ -35,7 +35,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-10 bg-gradient-to-b from-[#0a0a1a] via-[#0c0c1e] to-[#0f0f2f]"
+      className="py-10 bg-linear-to-b from-[#0a0a1a] via-[#0c0c1e] to-[#0f0f2f]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
@@ -47,7 +47,7 @@ export default function Experience() {
               whileInView={{ width: "98%" }}
               viewport={{ once: false }}
               transition={{ duration: 1.2, delay: 0.5 }}
-              className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+              className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-linear-to-r from-purple-500 rounded-full"
             />
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -59,7 +59,7 @@ export default function Experience() {
         {/* Timeline */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-purple-500/50 via-cyan-500/50 to-transparent hidden md:block"></div>
+          <div className="absolute left-8 top-0 bottom-0 w-px bg-linear-to-b from-purple-500/50 via-cyan-500/50 to-transparent hidden md:block"></div>
 
           {experiences.map((exp, index) => (
             <div
@@ -72,7 +72,7 @@ export default function Experience() {
                   className={`absolute top-3 left-8 w-5 h-5 rounded-full border-4 border-[#0c0c1e] shadow-2xl transition-all duration-500
                     ${
                       exp.current
-                        ? "bg-gradient-to-br from-purple-500 to-cyan-500 animate-pulse ring-4 ring-purple-500/30"
+                        ? "bg-linear-to-br from-purple-500 to-cyan-500 animate-pulse ring-4 ring-purple-500/30"
                         : "bg-gray-600"
                     }`}
                 ></div>
@@ -102,7 +102,7 @@ export default function Experience() {
                     </p>
                     <p className="text-sm text-gray-400">{exp.location}</p>
                   </div>
-                  <span className="inline-block px-5 py-2 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-md border border-purple-500/30 text-purple-300 text-sm font-medium rounded-full">
+                  <span className="inline-block px-5 py-2 bg-linear-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-md border border-purple-500/30 text-purple-300 text-sm font-medium rounded-full">
                     {exp.period}
                   </span>
                 </div>

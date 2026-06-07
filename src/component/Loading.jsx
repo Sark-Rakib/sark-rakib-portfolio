@@ -56,7 +56,7 @@ export default function Loading({ onLoaded }) {
 
         {/* Orbiting Glow Dot */}
         <motion.div
-          className="absolute w-6 h-6 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full blur-md shadow-2xl"
+          className="absolute w-6 h-6 bg-linear-to-r from-purple-400 to-cyan-400 rounded-full blur-md shadow-2xl"
           style={{
             top: "50%",
             left: "50%",
@@ -91,7 +91,7 @@ export default function Loading({ onLoaded }) {
 
           {/* Pulsing underline */}
           <motion.div
-            className="w-32 h-1 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mt-6"
+            className="w-32 h-1 bg-linear-to-r from-purple-400 to-cyan-400 rounded-full mt-6"
             animate={{ width: [80, 128, 80], opacity: [0.7, 1, 0.7] }}
             transition={{ duration: 3, repeat: Infinity }}
           />

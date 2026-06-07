@@ -1,19 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import homePage from "../assets/homepages.png";
 
 export default function Projects() {
   const projects = [
+    {
+      title: "Lunor Official",
+      description:
+        "Lunor is a responsive e-commerce platform that allows users to browse products, filter categories, and place orders through a modern and user-friendly interface. Built with React.js, Node.js, Express.js, MongoDB, and Firebase to deliver a scalable and seamless shopping experience",
+      tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB", "Email.js"],
+      liveUrl: "https://lunorr.netlify.app",
+      clientUrl: "https://github.com/Sark-Rakib/lunor-client",
+      serverUrl: "https://github.com/Sark-Rakib/lunor-server",
+      image: homePage,
+      featured: true,
+    },
     {
       title: "Harir Shad",
       description:
         "Production-ready full-stack web application built with React, Firebase Authentication, and MongoDB. Includes a responsive dashboard, product management system, and real-time data handling with a clean, modern UI.",
       tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB", "Email.js"],
       liveUrl: "https://harirshad.netlify.app",
-      githubUrl: "https://github.com/Sark-Rakib/dessert-shop-client",
+      clientUrl: "https://github.com/Sark-Rakib/dessert-shop-client",
+      serverUrl: "https://github.com/Sark-Rakib/dessert-shop-server",
       image:
         "https://i.ibb.co.com/rRqkWcD0/Screenshot-from-2026-02-12-02-27-30.png",
-      featured: true,
     },
     {
       title: "E-PRoducts",
@@ -21,7 +33,7 @@ export default function Projects() {
         "Advanced machine intelligence that delivers accurate and reliable predictions.",
       tech: ["Next.js", "Tailwind", "Node.js", "Express", "MongoDB"],
       liveUrl: "https://e-productsapp.vercel.app/",
-      githubUrl: "https://github.com/Sark-Rakib/e-products",
+      clientUrl: "https://github.com/Sark-Rakib/e-products",
       image: "https://i.ibb.co.com/9mMrLbGJ/Screenshot-2026-01-22-233604.png",
     },
     {
@@ -30,7 +42,8 @@ export default function Projects() {
         "MERN-stack online tuition platfrom, Stripe payments, and admin dashboard.",
       tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB"],
       liveUrl: "https://e-tuition-bd.netlify.app",
-      githubUrl: "https://github.com/Sark-Rakib/e-tuition-bd",
+      clientUrl: "https://github.com/Sark-Rakib/e-tuition-bd",
+      serverUrl: "https://github.com/Sark-Rakib/e-tuition-bd-server",
       image: "https://i.ibb.co.com/sp865H4P/2026-01-13.png",
       featured: true,
     },
@@ -41,7 +54,8 @@ export default function Projects() {
         "Advanced machine intelligence that delivers accurate and reliable predictions.",
       tech: ["React", "Tailwind", "Node.js", "Express", "MongoDB"],
       liveUrl: "https://ai-model-dev.netlify.app/",
-      githubUrl: "https://github.com/Sark-Rakib/ai-model-client",
+      clientUrl: "https://github.com/Sark-Rakib/ai-model-client",
+      serverUrl: "https://github.com/Sark-Rakib/Al-Model-Server",
       image: "https://i.ibb.co.com/qFPVMJfv/Screenshot-2025-12-08-015911.png",
     },
     {
@@ -49,7 +63,7 @@ export default function Projects() {
       description: "Modern plant shop with fresh delivery and gardening tools.",
       tech: ["React", "AOS", "Tailwind", "Firebase"],
       liveUrl: "https://buildtree-shop.netlify.app/",
-      githubUrl: "https://github.com/Sark-Rakib/Tree-Shop",
+      clientUrl: "https://github.com/Sark-Rakib/Tree-Shop",
       image: "https://i.ibb.co.com/RGP3M1GX/Screenshot-2025-12-08-020819.png",
     },
     {
@@ -57,7 +71,7 @@ export default function Projects() {
       description: "Fast, reliable news portal with real-time updates.",
       tech: ["React", "AOS", "Tailwind", "Firebase"],
       liveUrl: "https://dragonsnews.netlify.app/",
-      githubUrl: "https://github.com/Sark-Rakib/The-Dragon-News",
+      clientUrl: "https://github.com/Sark-Rakib/The-Dragon-News",
       image: "https://i.ibb.co.com/TMJnZBRL/Screenshot-2025-12-08-020451.png",
     },
     {
@@ -65,7 +79,7 @@ export default function Projects() {
       description: "Task management app with charts and productivity tools.",
       tech: ["React", "ReChart", "Tailwind"],
       liveUrl: "https://herooapps.netlify.app/",
-      githubUrl: "https://github.com/Sark-Rakib/My-Hero-App",
+      clientUrl: "https://github.com/Sark-Rakib/My-Hero-App",
       image: "https://i.ibb.co.com/zh65PbM0/Screenshot-2025-12-08-020617.png",
     },
     {
@@ -73,7 +87,7 @@ export default function Projects() {
       description: "Eco-friendly website promoting sustainable living.",
       tech: ["HTML", "Tailwind", "JavaScript"],
       liveUrl: "https://sark-rakib.github.io/Green-Earth/",
-      githubUrl: "https://github.com/Sark-Rakib/Green-Earth",
+      clientUrl: "https://github.com/Sark-Rakib/Green-Earth",
       image: "https://i.ibb.co.com/xtRFQdKt/Screenshot-2025-12-08-015750.png",
     },
   ];
@@ -81,7 +95,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-20 bg-gradient-to-b from-[#0f0f2f] via-[#0c0c1e] to-[#0a0a1a]"
+      className="py-20 bg-linear-to-b from-[#0f0f2f] via-[#0c0c1e] to-[#0a0a1a]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
@@ -93,7 +107,7 @@ export default function Projects() {
               whileInView={{ width: "99%" }}
               viewport={{ once: false }}
               transition={{ duration: 1.2, delay: 0.5 }}
-              className="absolute top-10 left-1/2 -translate-x-1/2 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+              className="absolute top-10 left-1/2 -translate-x-1/2 h-1 bg-linear-to-r from-purple-500 rounded-full"
             />
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -127,23 +141,44 @@ export default function Projects() {
                 />
 
                 {/* Clean & Beautiful Buttons on Hover */}
-                <div className="absolute inset-0 flex items-center justify-center gap-6 opacity-0 group-hover:opacity-100 transition-all duration-500 bg-black/40 backdrop-blur-sm">
+                <div
+                  className="
+    absolute inset-0
+    flex items-center justify-center gap-4
+    opacity-100 md:opacity-0 md:group-hover:opacity-100
+    transition-all duration-500
+    bg-black/30 md:bg-black/40
+    mt-50
+  "
+                >
                   <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-10 py-2 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-md border border-purple-500/30 text-purple-300 font-semibold rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
+                    className="flex items-center gap-2 px-7 py-2 bg-linear-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-md border border-purple-500/30 text-purple-300 font-extralight rounded-full hover:shadow-xl hover:scale-105 transition-all duration-300"
                   >
                     Live
                   </a>
                   <a
-                    href={project.githubUrl}
+                    href={project.clientUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-2 bg-white/10 backdrop-blur-md border border-white/30 text-white font-semibold rounded-full hover:bg-white/20 hover:border-purple-400 transition-all duration-300"
+                    className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/30 text-white font-extralight rounded-full hover:bg-white/20 hover:border-purple-400 transition-all duration-300"
                   >
-                    GitHub
+                    Client
                   </a>
+                  {project.serverUrl ? (
+                    <a
+                      href={project.serverUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/30 text-white font-extralight rounded-full hover:bg-white/20 hover:border-purple-400 transition-all duration-300"
+                    >
+                      Server
+                    </a>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
 
@@ -154,7 +189,7 @@ export default function Projects() {
                     {project.title}
                   </h3>
                   {project.featured && (
-                    <span className="px-4 py-2 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-md border border-purple-500/30 text-purple-300 text-xs font-bold rounded-full">
+                    <span className="px-4 py-2 bg-linear-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-md border border-purple-500/30 text-purple-300 text-xs font-bold rounded-full">
                       Featured
                     </span>
                   )}
@@ -194,7 +229,7 @@ export default function Projects() {
               whileInView={{ width: "100%" }}
               viewport={{ once: false }}
               transition={{ duration: 1.2, delay: 0.5 }}
-              className="absolute top-7 left-1/2 -translate-x-1/2  h-1 bg-gradient-to-r from-purple-500 rounded-full"
+              className="absolute top-7 left-1/2 -translate-x-1/2  h-1 bg-linear-to-r from-purple-500 rounded-full"
             />
             <a
               href="https://github.com/Sark-Rakib"

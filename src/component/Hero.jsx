@@ -26,7 +26,7 @@ export default function Hero() {
   };
 
   const resumeUrl =
-    "https://drive.google.com/file/d/1rgv86loAZhcH1SwGk9QuleXoixStIGdC/view?usp=sharing";
+    "https://drive.google.com/file/d/199QNmqt0pd9tsVcsIW301Bq77yvftXAW/view?usp=sharing";
 
   // Social links - replace with your actual profiles
   const socialLinks = {
@@ -181,14 +181,14 @@ export default function Hero() {
       >
         <motion.p
           variants={item}
-          className="text-lg sm:text-xl mt-20 sm:mt-10 md:mt-20 text-purple-400 font-medium mb-4"
+          className="uppercase text-lg sm:text-xl mt-20 sm:mt-10 md:mt-20 text-purple-400 font-medium mb-4"
         >
-          Hi there, my name is
+          Hey, my name is
         </motion.p>
 
         <motion.h1
           variants={item}
-          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 bg-gradient-to-r from-white to-purple-700 bg-clip-text text-transparent"
+          className="text-4xl sm:text-5xl md:text-6xl font-bold mb-2 bg-linear-to-r from-white to-purple-700 bg-clip-text text-transparent"
         >
           RAKIB SARKER
         </motion.h1>
@@ -197,7 +197,7 @@ export default function Hero() {
           variants={item}
           className="h-20 flex items-center justify-start mb-4"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-purple-300">
+          <h2 className="uppercase text-2xl sm:text-3xl md:text-3xl font-semibold text-purple-300">
             {text}
             <AnimatePresence>
               <motion.span

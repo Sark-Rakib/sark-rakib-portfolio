@@ -15,13 +15,13 @@ const ReviewSection = () => {
         "Rakib is an extremely talented developer. His portfolio projects are top-notch and very professional.",
     },
     {
-      name: "Artem Borysenko",
+      name: "Rafin Muttakim",
       role: "Project Manager",
       comment:
         "Working with Rakib was a pleasure. He delivers clean and efficient code on time.",
     },
     {
-      name: "Graham Grieve",
+      name: "MD. Gias Uddin",
       role: "UI/UX Designer",
       comment:
         "Rakib has a great eye for design. His front-end skills are impressive and polished.",
@@ -33,7 +33,7 @@ const ReviewSection = () => {
         "Rakib’s code is clean, modular, and easy to understand. Collaborating with him was seamless.",
     },
     {
-      name: "Emna Naili",
+      name: "Nadim Hasan Nayem",
       role: "CEO, Startup Inc.",
       comment:
         "Rakib transformed our web ideas into reality. His designs are modern, responsive, and user-friendly.",
@@ -41,7 +41,7 @@ const ReviewSection = () => {
   ];
 
   return (
-    <section className="w-full mx-auto px-2 py-20 bg-gradient-to-b from-[#0f0f2f] via-[#0c0c1e] to-[#0a0a1a]">
+    <section className="w-full mx-auto px-2 py-20 bg-linear-to-b from-[#0f0f2f] via-[#0c0c1e] to-[#0a0a1a]">
       <div className="text-center mb-20">
         <h2 className="text-4xl sm:text-4xl lg:text-4xl font-bold text-white mb-6 tracking-tight relative inline-block">
           What People <span className="text-purple-400">Say</span>
@@ -50,7 +50,7 @@ const ReviewSection = () => {
             whileInView={{ width: "98%" }}
             viewport={{ once: false }}
             transition={{ duration: 1.2, delay: 0.5 }}
-            className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+            className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-linear-to-r from-purple-500 rounded-full"
           />
         </h2>
         <p className="text-xl text-gray-400 max-w-3xl mx-auto">

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ProfilePic from "../assets/IMG_20250905_174354610_HDR_AEabou-removebg-preview.png";
+import ProfilePic from "../assets/IMG_20260510_022238.png";
 
 export default function About() {
   // Variants for staggered children
@@ -34,7 +34,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-20 bg-gradient-to-b from-[#0c0c1e] to-[#0f0f2f] relative overflow-hidden"
+      className="py-20 bg-linear-to-b from-[#0c0c1e] to-[#0f0f2f] relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
@@ -52,7 +52,7 @@ export default function About() {
               whileInView={{ width: "100%" }}
               viewport={{ once: false }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="absolute top-10 left-1/2 -translate-x-1/2 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+              className="absolute top-10 left-1/2 -translate-x-1/2 h-1 bg-linear-to-r from-purple-500 rounded-full"
             />
           </h2>
           <motion.p
@@ -99,7 +99,7 @@ export default function About() {
                 <img
                   src={ProfilePic}
                   alt="Rakib Sarker"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000"
+                  className="w-full h-full object-cover transition-all duration-1000"
                 />
               </div>
 
@@ -198,7 +198,7 @@ export default function About() {
                   ],
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="inline-block px-10 py-5 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-md border border-purple-500/30 text-purple-300 font-bold text-lg rounded-full shadow-xl"
+                className="inline-block px-10 py-5 bg-linear-to-r from-purple-600/30 to-cyan-600/30 backdrop-blur-md border border-purple-500/30 text-purple-300 font-bold text-lg rounded-full shadow-xl"
               >
                 Let's Work Together
               </motion.a>

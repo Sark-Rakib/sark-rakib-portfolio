@@ -128,7 +128,7 @@ export default function Services() {
   return (
     <section
       id="services"
-      className=" py-20 bg-gradient-to-b from-[#0f0f2f] via-[#0c0c1e] to-[#0a0a1a]"
+      className=" py-20 bg-linear-to-b from-[#0f0f2f] via-[#0c0c1e] to-[#0a0a1a]"
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Header */}
@@ -140,7 +140,7 @@ export default function Services() {
               whileInView={{ width: "95%" }}
               viewport={{ once: false }}
               transition={{ duration: 1.2, delay: 0.5 }}
-              className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+              className="absolute top-10 left-1/2 -translate-x-1/2 w-40 h-1 bg-linear-to-r from-purple-500 rounded-full"
             />
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -163,9 +163,9 @@ export default function Services() {
               className="group relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-4 hover:shadow-2xl"
             >
               {/* Gradient hover glow */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+              <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-purple-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
 
-              <div className="mb-6 inline-flex p-4 bg-gradient-to-br from-purple-600/20 to-cyan-00 rounded-2xl text-white group-hover:scale-110 transition-transform duration-300">
+              <div className="mb-6 inline-flex p-4 bg-linear-to-br from-purple-600/20 to-cyan-00 rounded-2xl text-white group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
               </div>
 
