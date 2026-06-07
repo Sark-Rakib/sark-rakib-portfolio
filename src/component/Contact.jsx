@@ -67,7 +67,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-5 bg-gradient-to-b from-[#0f0f25] via-[#0c0c1e] to-[#0f0f2f]"
+      className="py-5 bg-linear-to-b from-[#0f0f25] via-[#0c0c1e] to-[#0f0f2f]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 text-center">
         {/* Header */}
@@ -78,7 +78,7 @@ export default function Contact() {
             whileInView={{ width: "98%" }}
             viewport={{ once: false }}
             transition={{ duration: 1.2, delay: 0.5 }}
-            className="absolute top-9 left-1/2 -translate-x-1/2 w-32 sm:w-40 h-1 bg-gradient-to-r from-purple-500 rounded-full"
+            className="absolute top-9 left-1/2 -translate-x-1/2 w-32 sm:w-40 h-1 bg-linear-to-r from-purple-500 rounded-full"
           />
         </h2>
 
