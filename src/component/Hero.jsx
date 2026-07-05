@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function Hero() {
   const [text, setText] = useState("");
   // const [showCursor, setShowCursor] = useState(true);
-  const fullText = "I'm a Passionate Web Developer";
+  const fullText = "I'm a Frontend Developer";
 
   useEffect(() => {
     let index = 0;
@@ -214,7 +214,7 @@ export default function Hero() {
           className="text-lg sm:text-xl text-gray-300 leading-relaxed"
         >
           I craft beautiful, fast, and user-friendly web experiences <br />
-          using modern technologies like React and Tailwind CSS.
+          using modern technologies like React.js, Next.js and Tailwind CSS.
         </motion.p>
 
         {/* Buttons - Find Me button removed */}

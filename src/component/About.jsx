@@ -134,19 +134,13 @@ export default function About() {
 
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               {[
-                "I'm a passionate MERN Stack Developer who loves turning ideas into beautiful, functional, and lightning-fast digital experiences.",
-                "I specialize in React, Node.js, and modern web technologies to build products that people love to use — from pixel-perfect UIs to scalable backend systems.",
-                "When I'm not coding, you’ll find me exploring new tech, designing clean UIs in Figma, contributing to open-source, or helping junior developers grow.",
-                "I believe in writing clean, maintainable code and creating interfaces that work flawlessly on every device. Every project is a chance to learn, improve, and deliver something exceptional.",
+                "I'm a passionate Frontend Developer who loves turning ideas into beautiful, responsive, and high-performance web experiences.",
+                "I specialize in React, Next.js, JavaScript and Tailwind CSS to build modern, scalable, and user-friendly interfaces. I also have hands-on experience with the MERN Stack for developing full-stack applications.",
+                "When I'm not coding, you'll find me exploring new technologies, designing clean user interfaces in Figma, building personal projects, or continuously improving my development skills.",
+                "I believe in writing clean, maintainable code and creating accessible, performant interfaces that deliver a great user experience across all devices. Every project is an opportunity to learn, grow, and build something meaningful.",
               ].map((paragraph, i) => (
                 <motion.p key={i} variants={item} className="opacity-90">
-                  {paragraph.split("MERN Stack Developer")[0]}
-                  {i === 0 && (
-                    <span className="text-purple-400 font-semibold">
-                      MERN Stack Developer
-                    </span>
-                  )}
-                  {paragraph.split("MERN Stack Developer")[1] || paragraph}
+                  {paragraph}
                 </motion.p>
               ))}
             </div>
